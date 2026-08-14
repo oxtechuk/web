@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تويوتا راف فور - Spec Sheet</title>
+    <style>
+        @font-face {
+            font-family: 'BahijTheSans';
+            src: url('C:\wamp64\www\ga\public\assets/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BahijTheSans';
+            src: url('C:\wamp64\www\ga\public\assets/fonts/Bahij_TheSansArabic-SemiBold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @page {
+            margin: 0px;
+            size: A4 portrait;
+        }
+        body {
+            font-family: 'BahijTheSans', 'DejaVu Sans', 'Helvetica Neue', 'Arial', sans-serif;
+            color: #1e293b;
+            line-height: 1.4;
+            margin: 0px;
+            padding: 0px;
+            background-color: #ffffff;
+            direction: ltr;
+            text-align: right;
+        }
+        .page {
+            position: relative;
+            width: 100%;
+            height: 297mm;
+            page-break-after: always;
+            box-sizing: border-box;
+        }
+        .page:last-child {
+            page-break-after: avoid;
+        }
+
+        /* Full Width Header Bar */
+        .header-bar-table {
+            width: 100%;
+            background-color: #0b1a30;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+        }
+        .header-bar-table td {
+            padding: 10px 24px;
+            vertical-align: middle;
+        }
+        .header-logo-cell-left {
+            width: 25%;
+            text-align: left;
+        }
+        .header-title-cell-right {
+            width: 75%;
+            text-align: right;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: bold;
+            letter-spacing: 0.2px;
+        }
+        .header-title-cell-left {
+            width: 75%;
+            text-align: left;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: bold;
+            letter-spacing: 0.2px;
+        }
+        .header-logo-cell-right {
+            width: 25%;
+            text-align: right;
+        }
+        .header-logo-img {
+            height: 24px;
+            width: auto;
+            display: inline-block;
+        }
+
+        /* Page Content Area */
+        .content {
+            padding: 20px 35px;
+        }
+
+        /* Title Box */
+        .title-box-wrapper {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .title-box {
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px 18px;
+            display: inline-block;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .title-box h1 {
+            font-size: 18px;
+            margin: 0;
+            color: #0f172a;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        /* Main Image */
+        .main-image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 530px;
+            height: 275px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* Key Specs Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+        .specs-table tr {
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .specs-table td {
+            padding: 8px 10px;
+            font-size: 12.5px;
+        }
+        .specs-col-left {
+            width: 50%;
+            text-align: left;
+        }
+        .specs-col-right {
+            width: 50%;
+            text-align: right;
+        }
+
+        /* Categorized Features Sections (Page 2) */
+        .category-block {
+            margin-bottom: 22px;
+            page-break-inside: avoid;
+        }
+        .category-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 4px;
+            text-align: right;
+        }
+        .category-divider {
+            border-bottom: 1px solid #cbd5e1;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .features-grid {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .features-grid td {
+            width: 25%;
+            padding: 5px 6px;
+            font-size: 11.5px;
+            color: #334155;
+            vertical-align: top;
+            text-align: right;
+        }
+
+        /* Gallery Page Vertical Stack */
+        .pdf-gallery-vertical {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .gallery-vertical-item {
+            text-align: center;
+            margin-bottom: 20px;
+            height: 370px;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+        .gallery-vertical-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: Key Specs & Main Photo -->
+    <div class="page">
+        <!-- Dark Top Header Bar -->
+        <table class="header-bar-table">
+            <tr>
+                                    <td class="header-logo-cell-left">
+                                                    <img src="data:image/png;base64,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" class="header-logo-img" alt="Logo">
+                                            </td>
+                    <td class="header-title-cell-right">
+                        رﻮﻓ فار ﺎﺗﻮﻳﻮﺗ
+                    </td>
+                            </tr>
+        </table>
+
+        <div class="content">
+            <!-- Centered Header Box -->
+            <div class="title-box-wrapper">
+                <div class="title-box">
+                    <h1>رﻮﻓ فار ﺎﺗﻮﻳﻮﺗ</h1>
+                </div>
+            </div>
+
+            <!-- Main Car Image -->
+                        
+            <!-- 2-Column Key Specs Table -->
+            <table class="specs-table">
+                                                        <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">available</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﺔﻟﺎﺤﻟا</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">Suv</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻞﻜﻴﻬﻟع اﻮﻧ</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">ﺎﺗﻮﻳﻮﺗ</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﺔﻛرﺎﻤﻟا</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">RAV4</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻞﻳدﻮﻤﻟا</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">0 KM</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;"> ﻰﺸﻤﻣاﺎﻴﺴﻟرة</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">ﻦﻴﺠﻫ</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻮﻧع اﻮﻗﻮﻟد</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">2.5</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">اﺮﺤﻤﻟك</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">2025</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻊﻨﺼﻟا ﺔﻨﺳ</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">رﺎﻣﺪﻳ</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻲﺟرﺎﺨﻟن اﻮﻠﻟا</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">أﻮﺳد</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻲﻠﺧاﺪﻟن اﻮﻠﻟا</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">ﻚﻴﺗﺎﻣﻮﺗأو</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﺔﻛﺮﺤﻟا ﻞﻗﺎﻧ</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">AWD</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﻊﻓﺪﻟم اﺎﻈﻧ</td>
+                                            </tr>
+                                                                            <tr>
+                                                    
+                            <td class="specs-col-left" style="color: #334155;">Suv</td>
+                            <td class="specs-col-right" style="font-weight: bold; color: #0f172a;">ﺔﺌﻔﻟا</td>
+                                            </tr>
+                                                </table>
+        </div>
+    </div>
+
+    <!-- PAGE 2: Categorized Features -->
+    <div class="page">
+        <!-- Dark Top Header Bar -->
+        <table class="header-bar-table">
+            <tr>
+                                    <td class="header-logo-cell-left">
+                                                    <img src="data:image/png;base64,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" class="header-logo-img" alt="Logo">
+                                            </td>
+                    <td class="header-title-cell-right">
+                        رﻮﻓ فار ﺎﺗﻮﻳﻮﺗ
+                    </td>
+                            </tr>
+        </table>
+
+        <div class="content" style="padding-top: 25px;">
+                                                                        <div class="category-block">
+                    <div class="category-title">ﺔﻴﺟرﺎﺨﻟﺎﺗ اﺰﻴﻤﻟا</div>
+                    <div class="category-divider"></div>
+                    <table class="features-grid">
+                                                                                <tr>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>يﻼﺑرﺎﻛ ﻞﺑأ ،ﻲﻣارﻮﻧﺎﺑ ﻒﻘﺳ ،ﻲﻋﺎﺑر ﻊﻓد</td>
+                                                            </tr>
+                                            </table>
+                </div>
+                                                                                            </div>
+    </div>
+
+    <!-- GALLERY PAGES (If Car Has Extra Images) -->
+    
+    
+    
+    
+    
+</body>
+</html>
